@@ -1,0 +1,8 @@
+// Setup PrasadCodeFirst.Web as start and Select PrasadCodeFirst.Data.EntityFramework
+
+Enable-Migrations -ContextTypeName PrasadCodeFirst.Data.EntityFramework.DbContexts.PrasadCodeFirstDbContext -MigrationsDirectory Migrations -Force
+
+Add-Migration -ConfigurationTypeName PrasadCodeFirst.Data.EntityFramework.Migrations.Configuration "InitialDatabaseCreation" -Force
+    Next Time : Add-Migration InitialDatabaseCreation
+
+Update-Database -Verbose -ConfigurationTypeName PrasadCodeFirst.Data.EntityFramework.Migrations.Configuration
